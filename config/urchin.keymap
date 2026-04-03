@@ -179,6 +179,14 @@
             bindings = <&kp LS(LC(T))>;
             key-positions = <22 12>;
         };
+
+        enter_bspc_layer_4 {
+            timeout-ms = <100>;
+            slow-release;
+            layers = <0>;
+            bindings = <&mo 4>;
+            key-positions = <32 33>;
+        };
     };
 
     conditional_layers {
@@ -197,7 +205,7 @@
             label = "Base";
             bindings = <
 &kp Q  &kp W  &kp E  &kp R      &kp T    &kp Y      &kp U          &kp I      &kp O       &kp P
-&mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G    &kp H      &mt RSHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
+&mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G    &kp H      &mt RSHIFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMICOLON
 &kp Z  &kp X  &kp C  &kp V      &kp B    &kp N      &kp M          &kp COMMA  &kp PERIOD  &kp SLASH
                      &lt 1 SPACE  &lt 2 TAB  &kp ENTER    &kp BACKSPACE
             >;
@@ -215,7 +223,7 @@
         layer_2 {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&mt LGUI NUMBER_4  &mt LALT NUMBER_5  &mt LCTRL NUMBER_6  &kp LSHIFT    &trans        &trans        &kp RSHIFT    &kp RCTRL     &kp RALT      &kp RGUI
+&mt LGUI NUMBER_4  &mt LALT NUMBER_5  &mt LCTRL NUMBER_6  &kp LSHIFT    &trans        &trans        &kp RSHIFT    &kp RCTRL     &kp LALT      &kp RGUI
 &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans        &trans        &trans        &trans        &trans        &trans
                                           &trans        &trans        &kp ENTER     &kp BACKSPACE
             >;
@@ -224,9 +232,18 @@
         layer_3 {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6  &kp F7  &kp F8  &kp F9   &kp F10
-&mt LGUI F4  &mt LALT F5  &mt LCTRL F6  &mt LSHIFT F11  &kp F12  &trans  &kp RSHIFT  &kp RCTRL  &mt RALT F11  &mt RGUI F12
+&mt LGUI F4  &mt LALT F5  &mt LCTRL F6  &mt LSHIFT F11  &kp F12  &trans  &kp RSHIFT  &kp RCTRL  &mt LALT F11  &mt RGUI F12
 &kp F7  &kp F8  &kp F9  &kp F10  &trans   &trans  &trans  &trans  &trans   &trans
                         &trans   &trans   &kp ENTER  &kp BACKSPACE
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &bt BT_CLR    &bt BT_CLR_ALL
+                        &trans   &trans   &trans        &trans
             >;
         };
     };
