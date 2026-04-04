@@ -252,7 +252,7 @@
             bindings = <
 &trans  &kp HOME  &kp UP    &kp END    &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
 &alt_tab_hold  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C_AC_BACK    &trans    &kp C_AC_FORWARD     &trans         &trans  &trans  &trans  &trans  &trans
+&kp LA(F4)  &kp C_AC_BACK    &kp C_AC_REFRESH    &kp C_AC_FORWARD     &kp LC(W)         &trans  &trans  &trans  &trans  &trans
                             &trans     &trans         &trans  &trans
             >;
         };
